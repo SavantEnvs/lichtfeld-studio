@@ -1,0 +1,9 @@
+project: savantenvs/lichtfeld-studio
+target: fuzz_python_syntax
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_python_syntax/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_python_syntax
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_python_syntax/fuzz_python_syntax.dict

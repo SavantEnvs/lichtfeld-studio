@@ -1,0 +1,10 @@
+# Commit-image build context: keep the full repo and .git (the grader uses history), drop local build output.
+build*/
+out/
+*.o
+*.a
+*.so
+**/__pycache__/
+.DS_Store
+*.swp
+*~

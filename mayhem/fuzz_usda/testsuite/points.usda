@@ -1,0 +1,11 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+
+def Points "Splats"
+{
+    point3f[] points = [(0, 0, 0), (1, 1, 1)]
+    float[] widths = [0.1, 0.2]
+    color3f[] primvars:displayColor = [(1, 0, 0), (0, 1, 0)]
+}

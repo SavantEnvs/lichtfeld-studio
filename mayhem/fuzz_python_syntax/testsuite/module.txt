@@ -1,0 +1,21 @@
+import os
+from math import sqrt
+
+@decorator
+class Scene(Base):
+    """doc"""
+    count = 3
+
+    def method(self, x, *args, **kw):
+        for i in range(x):
+            if i % 2 == 0 and not kw:
+                yield i ** 2
+            else:
+                print(f"{i!r:>4}", [j for j in args if j])
+        return lambda y: y + 1
+
+try:
+    with open("f") as fh:
+        data = fh.read()
+except (OSError, ValueError) as e:
+    raise RuntimeError("bad") from e

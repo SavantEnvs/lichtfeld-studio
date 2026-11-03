@@ -1,0 +1,9 @@
+project: savantenvs/lichtfeld-studio
+target: fuzz_tinyply
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tinyply/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tinyply
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_tinyply/fuzz_tinyply.dict

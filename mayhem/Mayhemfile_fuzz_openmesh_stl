@@ -1,0 +1,9 @@
+project: savantenvs/lichtfeld-studio
+target: fuzz_openmesh_stl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_openmesh_stl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_openmesh_stl
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_openmesh_stl/fuzz_openmesh_stl.dict

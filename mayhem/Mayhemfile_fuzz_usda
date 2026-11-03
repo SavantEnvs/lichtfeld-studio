@@ -1,0 +1,9 @@
+project: savantenvs/lichtfeld-studio
+target: fuzz_usda
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_usda/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_usda
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_usda/fuzz_usda.dict

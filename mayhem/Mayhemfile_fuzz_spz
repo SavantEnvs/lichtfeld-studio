@@ -1,0 +1,9 @@
+project: savantenvs/lichtfeld-studio
+target: fuzz_spz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_spz/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_spz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_spz/fuzz_spz.dict

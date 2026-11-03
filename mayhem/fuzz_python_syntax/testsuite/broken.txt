@@ -1,0 +1,4 @@
+def f(:
+    class
+  x = [1, 2
+if True print(1)
